@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 import { signOut, signIn, useSession } from 'next-auth/react';
 import { createComment, getMessages } from '../actions';
