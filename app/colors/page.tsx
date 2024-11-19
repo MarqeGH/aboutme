@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
-
+import Header from '@/components/header';
 export default function ColorsPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [color, setColor] = useState<string>('#FF0000');
@@ -51,7 +50,7 @@ export default function ColorsPage() {
   return (
     <div>
       <div className="flex justify-between items-center p-4">
-        <Link href="/">Back to Home</Link>
+        <Header />
         <div>
           <button onClick={() => setColor('#FF0000')} className="bg-red-500 text-white p-2 m-2">Red</button>
           <button onClick={() => setColor('#00FF00')} className="bg-green-500 text-white p-2 m-2">Green</button>
