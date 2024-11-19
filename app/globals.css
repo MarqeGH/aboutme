@@ -5,6 +5,10 @@
 :root {
   --background: #171717;
   --foreground: #ffffff;
+  --linkbackground: #4710be;
+}
+a {
+  color: var(--linkbackground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +22,16 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.flexbox {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.headerimg {
+  width: 20%;
+  margin:auto;
 }
