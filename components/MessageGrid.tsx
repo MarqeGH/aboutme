@@ -5,15 +5,15 @@ interface Message {
   username: string;
 }
 
-interface MessageListProps {
+interface MessageGridProps {
   messages: Message[];
 }
 
-export default function MessageList({ messages }: MessageListProps) {
+export default function MessageGrid({ messages }: MessageGridProps) {
   return (
-    <div className="flex flex-col gap-4 max-w-2xl mx-auto">
+    <div className="grid grid-cols-3 gap-4">
       {[...messages].map((message, index) => (
-        <div key={index} className="p-4 border rounded-lg shadow-sm w-full">
+        <div key={index} className="p-4 border rounded-lg shadow-sm">
           <p className="break-words mb-2">{message.text}</p>
           <a 
             href={`https://x.com/${message.username}`}
@@ -27,4 +27,4 @@ export default function MessageList({ messages }: MessageListProps) {
       ))}
     </div>
   );
-}
+} 
